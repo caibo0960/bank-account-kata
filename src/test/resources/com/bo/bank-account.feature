@@ -40,5 +40,8 @@ Feature: Bank account
     When I make a deposit of 100
     And I make a withdrawal of 300
     Then My account should have 800
-    When I want see my account operation history
+    When I check my account operation history
     Then The account operation history should be print as follows
+      | operation  | amount | accountBalanceBefore | accountBalanceAfter |
+      | DEPOSIT    | 100    | 1,000                | 1,100               |
+      | WITHDRAWAL | 300    | 1,100                | 800                 |
